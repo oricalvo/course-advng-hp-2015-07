@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        <form name="form1" novalidate>
+            Birthday:<br />
+            <input type="date" ng-model="birthday" name="birthday" required />
+
+            <br />
+            <br />
+            <button ng-click="run()">Save</button>
+        </form>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="MyApp.js"></script>
+    <script src="InputDirective.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

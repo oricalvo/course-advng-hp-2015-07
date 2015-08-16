@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        <grid model="contacts">
+            <column title="{{titleName}}">
+                <button ng-click="deleteContact()">Delete</button>
+                <span>{{dataItem.name}}</span>
+            </column>
+
+            <column title="{{titleEMail}}">
+                <span>{{dataItem.email}}</span>
+            </column>
+        </grid>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="MyApp.js"></script>
+    <script src="GridWidget.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

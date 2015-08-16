@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="body" ng-app="MyApp">
+        <div no-compile>
+            <h1>{{title}}</h1>
+        </div>
+
+        <grid data="records">
+            <column title="{{FirstName}}">
+                <button>Delete</button>
+                <span>{{record.firstName}}</span>
+            </column>
+
+            <column title="{{LastName}}">
+                <input type="checkbox" />
+                <span>{{record.lastName}}</span>
+            </column>
+        </grid>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

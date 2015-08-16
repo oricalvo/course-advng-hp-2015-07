@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        (function () {
+            function getCounter() {
+                var counter = 0;
+
+                return function () {
+                    ++counter;
+
+                    console.log(counter);
+                }
+            }
+
+            var counter1 = getCounter();
+            counter1();
+
+            var counter2 = getCounter();
+            counter2();
+
+            console.log(counter1 == counter2);
+        })();
+    </script>
+</body>
+</html>

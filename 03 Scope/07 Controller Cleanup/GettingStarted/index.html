@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        <div ng-if="page=='page1'">
+            <div ng-controller="Page1Ctrl">
+                <h1>Page 1</h1>
+            </div>
+        </div>
+
+        <div ng-if="page=='page2'">
+            <div ng-controller="Page2Ctrl">
+                <h1>Page 2</h1>
+            </div>
+        </div>
+
+        <button ng-click="run()">Toggle</button>
+        <button ng-click="emit()">Emit</button>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="MyApp.js"></script>
+    <script src="HomeCtrl.js"></script>
+    <script src="Page1Ctrl.js"></script>
+    <script src="Page2Ctrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script src="Shape.js"></script>
+    <script src="Rect.js"></script>
+    <script>
+        (function (Rect, Shape) {
+
+            var s1 = new Rect(5, 10, 100, 200);
+            s1.dump();
+
+            console.log(s1 instanceof Rect);
+            console.log(s1 instanceof Object);
+            console.log(s1 instanceof Shape);
+
+        })(MyApp.Rect, MyApp.Shape);
+    </script>
+</body>
+</html>

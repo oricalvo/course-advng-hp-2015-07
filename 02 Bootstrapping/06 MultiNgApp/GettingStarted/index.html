@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div hp-app>
+        <div ng-controller="HomeCtrl">
+            {{message}}
+
+            <button ng-click="lazyLoad()">Lazy Load Another Service</button>
+        </div>
+    </div>
+
+    <div>
+        Non angular controlled code
+
+        {{should remain the same}}
+    </div>
+
+    <div hp-app>
+        <div ng-controller="HomeCtrl">
+            {{message}}
+
+            <button ng-click="lazyLoad()">Lazy Load Another Service</button>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="MyApp.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

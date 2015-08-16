@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        runAsync().then(
+            function () {
+                throw new Errro("ddd");
+            },
+            function () {
+            });
+
+        runAsync().then(function () {
+            //success
+            throw new Error("ddd");
+        }).catch(function (err) {
+            //error
+        });
+
+        setTimeout(function () {
+        }, 1500);
+
+        setTimeout(1500).then(function () {
+        });
+
+        var BL2 = {
+            getAllContacts: function () {
+                return DAL.getAllContacts().then(transform);
+            }
+        };
+
+        var BL = {
+            getAllContacts: function (success, error) {
+                DAL.getAllContacts(
+                    function (contacts) {
+                        try {
+                            if (success) {
+                                success(transform(contacts));
+                            }
+                        }
+                        catch (err) {
+                            if (error) {
+                                error(err);
+                            }
+                        }
+                    },
+                    error);
+            }
+        };
+
+        var DAL = {
+            getAllContacts: function (success, error) {
+                success([{ id: 1, name: "Ori" }]);
+            }
+        };
+    </script>
+</body>
+</html>

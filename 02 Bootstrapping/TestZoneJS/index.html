@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <button id="button1">Click me</button>
+    <script src="zone.js"></script>
+    <script>
+        zone.fork({
+            beforeTask: function () {
+                console.log("beforeTask");
+            }
+        })
+        .run(function () {
+            document.getElementById("button1").addEventListener("click", function () {
+                console.log("CLICK");
+            });
+        });
+    </script>
+</body>
+</html>

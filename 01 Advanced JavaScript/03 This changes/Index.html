@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        (function () {
+            "use strict";
+
+            var obj = {
+                id: 123,
+                run: function () {
+                    this.id = 12;
+                    console.log(this.id);
+                },
+            };
+
+            function runTask(complete) {
+                //
+                //  Executing
+                //
+
+                complete();
+            }
+
+            runTask(function () {
+                obj.run();
+            });
+
+            var f = obj.run;
+            f();
+        })();
+
+        function MainView(element) {
+            var me = this;
+
+            element.find("button.ok").on("click");
+        }
+
+        MainView.prototype.onButtonOk = function () {
+        }
+    </script>
+</body>
+</html>

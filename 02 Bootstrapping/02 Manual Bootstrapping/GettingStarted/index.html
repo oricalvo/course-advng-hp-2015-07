@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        {{message}}
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="MyApp.js"></script>
+    <script src="HomeCtrl.js"></script>
+
+    <script>
+        setTimeout(function () {
+            angular.bootstrap($("html"), ["MyApp"]);
+        }, 1500);
+    </script>
+</body>
+</html>
